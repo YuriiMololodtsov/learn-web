@@ -1,7 +1,8 @@
+// app/lessons/[lessonId]/page.tsx
 import { supabase } from '../../lib/supabaseClient';
 
 interface Lesson {
-  id: string;
+  id: number;
   title: string;
   description: string;
   content: string;
@@ -39,9 +40,13 @@ const LessonPage = async ({ params }: { params: { lessonId: string } }) => {
 };
 
 export async function generateStaticParams() {
-  const { data: lessons } = await supabase.from('lessons').select('id');
+  const { data: lessons, error } = await supabase.from('lessons').select('id');
 
-  return lessons.map((lesson: Lesson) => ({
+  if (error || !lessons) {
+    return [];
+  }
+
+  return lessons.map((lesson: { id: number }) => ({
     lessonId: lesson.id.toString(),
   }));
 }

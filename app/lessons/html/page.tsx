@@ -1,8 +1,9 @@
+// app/lessons/html/page.tsx
 import LessonTile from '../../components/LessonTile/LessonTile';
 import { supabase } from '../../lib/supabaseClient';
 
 interface Lesson {
-  id: string;
+  id: number;
   title: string;
   description: string;
   content: string;
@@ -32,7 +33,7 @@ const HtmlLessonsPage = async () => {
           lessons.map((lesson: Lesson) => (
             <LessonTile
               key={lesson.id}
-              id={lesson.id}
+              id={lesson.id.toString()}
               title={lesson.title}
               description={lesson.description}
             />
