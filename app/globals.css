@@ -21,7 +21,16 @@ body {
   margin: 2%;
   background-color: #cccacb;
   border-radius: 12px;
-  height: 100vh;
+  /* height: 100vh; */
   box-shadow: 7px 6px 18px 4px rgba(123, 123, 123, 0.5);
   padding: 12px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

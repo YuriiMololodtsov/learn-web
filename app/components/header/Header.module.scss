@@ -1,22 +1,23 @@
 .header {
-    background-color: #74787c;
-    height: 70px;
-    border-radius: 9px;
-    box-shadow: 7px 6px 18px -6px rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    padding: 24px;
-    justify-content: flex-end;
+  background-color: #74787c;
+  height: 70px;
+  border-radius: 9px;
+  box-shadow: 7px 6px 18px -6px rgba(0, 0, 0, 0.5), inset 0 0 3px rgba(255, 255, 255, .5);
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  justify-content: flex-end;
 }
 
 .nav {
-    color: #ffffff;
+  color: #ffffff;
+  display: flex;
+  gap: 54px;
 }
 
 .list {
-    display: flex;
-    gap: 12px;
-    list-style: none;
-    align-items: center;
-
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  align-items: center;
 }

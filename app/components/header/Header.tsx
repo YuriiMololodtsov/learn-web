@@ -11,6 +11,11 @@ const Header = () => {
         <li>CSS</li>
         <li>JavaScript</li>
     </ul>
+    <ul>
+        <li>
+            <a href="#">регистрация</a>
+        </li>
+    </ul>
 </nav>
     </header>
   )
